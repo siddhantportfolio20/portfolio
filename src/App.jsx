@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { HashRouter } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Skills from './components/Skills';
@@ -53,7 +52,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen transition-colors duration-300 relative overflow-hidden flex flex-col">
         {/* Ambient background glows */}
         <div className="fixed inset-0 z-[-1] pointer-events-none">
@@ -69,6 +68,6 @@ export default function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
